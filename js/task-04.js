@@ -1,19 +1,10 @@
 const getTotalBalanceByGender = (users, gender) => {
-        let total = 0;
-    for (const user of users) {
-        if (user.gender === gender) {
-            total += user.balance;
-        }
-    }
-    return total;
-    
-    // Не зміг розібратися чому метод reduce повертає undefined, тому вирішив задачу методом forof.
-    
-//     users.reduce((totalBalance, user) => {
-//     if (user.gender === gender) {
-//         return  totalBalance += user.balance 
-//     }
-// }, 0);
+ return users.reduce((totalBalance, user) => {
+     if (user.gender === gender) {
+     totalBalance += user.balance;
+     }
+   return totalBalance
+}, 0);    
 }
 
 const allUsers = [
